@@ -30,7 +30,7 @@ jobs:
         continue-on-error: true
         run: ./gradlew --no-daemon :shared:core:testAndroidHostTest
       - name: Build release-like side-by-side test APK
-        run: ./gradlew --no-daemon :androidApp:assembleDev -PappVersion=0.17.0-fix-ed057cd
+        run: ./gradlew --no-daemon :androidApp:assembleDev -PappVersion=0.17.0
       - name: Check APK and record checksum
         run: |
           apk=androidApp/build/outputs/apk/dev/androidApp-dev.apk
